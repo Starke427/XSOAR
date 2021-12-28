@@ -1,0 +1,71 @@
+commonfields:
+  id: aca36289-8b5e-45e7-8401-3b096a19e116
+  version: 85
+name: bulkDeleteIncidents
+script: |
+  from pprint import pprint
+
+
+  ## script vars
+  deletingThisBatch = []
+  page = 0 # starting page
+  size = 150 # Testing at different sizes (20, 100, 300) came out comparable (4.5 incidents / minute)
+  currentCount = 0
+
+
+  ## inputs from user
+  query = demisto.args()["incidentQuery"]
+  if demisto.get(demisto.args(), 'limit'):
+      limit = int(demisto.args()['limit'])
+  else:
+      limit = 10000
+
+
+  ## log is not synchronous, If the script times out these will not appear in Warroom
+  demisto.log("Starting, I'll say 'le fin' when I've finished")
+
+  ## Initial, find incidents matching the query
+  rawIncidents = demisto.executeCommand("getIncidents", {'page': page, 'size': size, 'query': query})[0]['Contents']['data']
+
+  while isinstance(rawIncidents, list) and (currentCount < limit):
+
+      # empty the ID list
+      deletingThisBatch.clear()
+
+      # Whilst not at limit, loop through incidents getting ID of those that match the input query
+      for incident in rawIncidents:
+          if currentCount < limit:
+              deletingThisBatch.append(incident['id'])
+              currentCount += 1
+
+
+      ## If script doesn't time out, print to warroom what you did
+      demisto.log("Deleting batch:"+str(page)+", [" + ",".join(deletingThisBatch)+"]")
+
+      demisto.executeCommand("demisto-delete-incidents", {"ids":deletingThisBatch})
+
+      page += 1
+
+      ## fetch next page of results
+      rawIncidents = demisto.executeCommand("getIncidents", {'page': page, 'size': size, 'query': query})[0]['Contents']['data']
+
+
+
+  demisto.log("le fin")
+type: python
+tags: []
+comment: Bulk delete up to 100,000 incidents in batches of size 150
+enabled: true
+args:
+- name: incidentQuery
+  required: true
+  description: The query from "Incidents page" that identifies which incidents to
+    delete   e.g. \"type:enrichment and status:closed\"
+- name: limit
+  description: Max amount to delete.  Default 10,000
+scripttarget: 0
+subtype: python3
+pswd: ""
+runonce: false
+dockerimage: demisto/python3:3.8.5.10845
+runas: DBotWeakRole

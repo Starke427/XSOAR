@@ -227,7 +227,136 @@
 				},
 				"description": "https://pokeapi.co/api/v2/evolution-chain/{id}/\r\n\r\nEvolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Evolution Chains",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/evolution-chain/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"evolution-chain",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 22:22:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=86400, s-maxage=86400"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"4c7-hl9AbrrziuVNbk7RC4TlFXUPKXc\""
+						},
+						{
+							"key": "function-execution-id",
+							"value": "s490boiy9p1q"
+						},
+						{
+							"key": "strict-transport-security",
+							"value": "max-age=31556926"
+						},
+						{
+							"key": "x-cloud-trace-context",
+							"value": "ebea837608e767cc8a2ab0221fa4cad5"
+						},
+						{
+							"key": "x-country-code",
+							"value": "US"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-served-by",
+							"value": "cache-iad-kiad7000156-IAD"
+						},
+						{
+							"key": "x-cache",
+							"value": "MISS"
+						},
+						{
+							"key": "x-cache-hits",
+							"value": "0"
+						},
+						{
+							"key": "x-timer",
+							"value": "S1663079784.494609,VS0,VE242"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding,cookie,need-authorization, x-fh-requested-host, accept-encoding"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "HIT"
+						},
+						{
+							"key": "Age",
+							"value": "26531"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=0E%2BEUDiStk5IUho2lURJd%2Fc8bQCYhSffic6AdhYgexfyKgVieACpfxc6cmu22DgvG74DH31%2BkUuX0L3hV4JM6WTeTszdHFXxbavLvqJ9D%2FkNuKNB%2BiZriEhlOUVU\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "74ac85bc2f9881d0-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 468,\n    \"next\": \"https://pokeapi.co/api/v2/evolution-chain/?offset=20&limit=20\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/1/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/2/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/3/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/4/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/5/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/6/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/7/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/8/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/9/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/10/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/11/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/12/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/13/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/14/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/15/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/16/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/17/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/18/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/19/\"\n        },\n        {\n            \"url\": \"https://pokeapi.co/api/v2/evolution-chain/20/\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Generations",
@@ -368,30 +497,6 @@
 					"body": "{\n    \"count\": 8,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"generation-i\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/1/\"\n        },\n        {\n            \"name\": \"generation-ii\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/2/\"\n        },\n        {\n            \"name\": \"generation-iii\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/3/\"\n        },\n        {\n            \"name\": \"generation-iv\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/4/\"\n        },\n        {\n            \"name\": \"generation-v\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/5/\"\n        },\n        {\n            \"name\": \"generation-vi\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/6/\"\n        },\n        {\n            \"name\": \"generation-vii\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/7/\"\n        },\n        {\n            \"name\": \"generation-viii\",\n            \"url\": \"https://pokeapi.co/api/v2/generation/8/\"\n        }\n    ]\n}"
 				}
 			]
-		},
-		{
-			"name": "Pokedexes ",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				},
-				"description": "A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See Bulbapedia for greater detail.\r\nhttps://pokeapi.co/api/v2/pokedex/{id or name}/"
-			},
-			"response": []
-		},
-		{
-			"name": "Abilities",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				},
-				"description": "https://pokeapi.co/api/v2/ability/{id or name}/\r\n\r\nAbilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out Bulbapedia for greater detail.\r\n\r\n"
-			},
-			"response": []
 		}
 	],
 	"event": [
